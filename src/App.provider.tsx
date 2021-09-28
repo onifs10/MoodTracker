@@ -65,10 +65,10 @@ export const AppProvider: React.FC = ({ children }) => {
     });
   }, []);
 
+  //load mood list from storage if it exists
   React.useEffect(() => {
     const getDataFromStorage = async () => {
       const data = await getAppData();
-
       if (data) {
         setMoodList(data.moods);
       }

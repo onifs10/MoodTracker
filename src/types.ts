@@ -6,3 +6,8 @@ export type MoodOptionWithTimestamp = {
   mood: MoodOptionType;
   timestamp: number;
 };
+
+export type AnalyticDataType = {
+  x: string | number;
+  y: number;
+};

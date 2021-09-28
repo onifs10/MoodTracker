@@ -12,10 +12,12 @@ const BottomTabs = createBottomTabNavigator();
 export const BottomTabsNavigator: React.FC = () => {
   return (
     <BottomTabs.Navigator
+      initialRouteName={'Home'}
       screenOptions={({ route }) => ({
         tabBarActiveTintColor: theme.colorBlue,
         headerTitleStyle: {
-          fontFamily: theme.fontFamilyRegular,
+          fontFamily: theme.fontFamilyBold,
+          color: theme.colorPurple,
         },
         tabBarInactiveTintColor: theme.colorGrey,
         tabBarShowLabel: false,
@@ -34,14 +36,14 @@ export const BottomTabsNavigator: React.FC = () => {
         },
       })}>
       <BottomTabs.Screen
-        name="Home"
-        component={Home}
-        options={{ title: "Today's Mood" }}
-      />
-      <BottomTabs.Screen
         name="History"
         options={{ title: "Past Mood's" }}
         component={History}
+      />
+      <BottomTabs.Screen
+        name="Home"
+        component={Home}
+        options={{ title: "Today's Mood" }}
       />
       <BottomTabs.Screen
         name="Analytics"
